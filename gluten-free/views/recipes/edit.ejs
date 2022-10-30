@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs')%>
+</head>
+
+<body>
+
+  <!-- Header and Nav Bar -->
+  <div class="Header">
+    <div class="gfLogo">
+      <img class="gfLogo" src="/imgs/gluten-free-logo.jpg">
+    </div>
+    <div class="li">
+      <a class="mainIndexLi" href="/new">Add a Recipe</a>
+    </div>
+    <div class="li">
+      <a class="mainIndexLi" href="/recipes">Recipes</a>
+    </div>
+    <div class="li">
+      <a class="mainIndexLi" href="/recipes/">Log Out</a>
+    </div>
+  </div>
+  <hr>
+  <!-- End of Header/Nav Bar -->
+
+  <h4>
+    Edit <%= recipe.recipeName %> Recipe
+  </h4>
+
+  <!-- Form information -->
+  <form action="/<%= recipe._id %>?_method=PUT" method="POST">
+
+    <!-- Recipe Name -->
+    <input type="text" name="recipeName" value="<%=recipe.recipeName%>" />
+    <br />
+
+    <!-- URL to an Image -->
+    URL: <input type="url" name="urlPath" placeholder="image URL" value=<%=recipe.urlPath %> />
+
+    <!-- Begin Rich Text Format tool -->
+    <textarea name="instructions">
+      <%= recipe.instructions %>
+    </textarea>
+    <script>
+      tinymce.init({
+        selector: 'textarea',
+        plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+        toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+        toolbar_mode: 'floating',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+        width: 900,
+        height: 850,
+        max_image_dimension: 50
+      });
+    </script>
+
+    <!-- Cancel and Update buttons -->
+    <button><a href="/recipes">Cancel</a></button>
+    <input type="submit" value="Update Recipe" />
+  </form>
+
+</body>
+
+</html>

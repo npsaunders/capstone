@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head.ejs')%>
+</head>
+
+<body>
+  <!-- Nav Bar & logo with Google login-->
+  <div class="Header">
+    <div class="gfLogo">
+      <a href="/"><img class="gfLogo" src="/imgs/gluten-free-logo.jpg" /></a>
+    </div>
+    <div class="li">
+      <% if (user) { %>
+        <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+        <% } else { %>
+          <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+          <% } %>
+    </div>
+  </div>
+
+  <!-- Background Video -->
+  <div class="video">
+    <video playsinline autoplay muted loop id="bgvid">
+      <source src="imgs/gf-background.mp4" type="video/mp4">
+    </video>
+  </div>
+</body>
+
+</html>

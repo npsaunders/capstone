@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs')%>
+</head>
+
+<body>
+  <!-- Header and Nav Bar -->
+  <div class="Header">
+    <div class="gfLogo">
+      <img class="gfLogo" src="/imgs/gluten-free-logo.jpg" />
+    </div>
+    <div class="li">
+      <a class="mainIndexLi" href="/new">Add a Recipe</a>
+    </div>
+    <div class="li">
+      <a class="mainIndexLi" href="/<%= recipe._id %>/edit">Edit Recipe</a>
+    </div>
+    <div class="li">
+      <a class="mainIndexLi" href="/recipes">Recipes</a>
+    </div>
+    <div class="li">
+      <a class="mainIndexLi" href="/logout">Log Out</a>
+    </div>
+  </div>
+  <hr>
+
+  <h4>
+    <%= recipe.recipeName %>
+  </h4>
+
+  <!-- Display recipe in Rich Text Formatting Tool -->
+  <textarea>
+    <%= recipe.instructions %>
+  </textarea>
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+      width: 900,
+      height: 850,
+      max_image_dimension: 50
+    });
+  </script>
+
+</body>
+
+</html>

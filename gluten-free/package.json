@@ -1,0 +1,34 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npsaunders/Gluten-Free.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npsaunders/Gluten-Free/issues"
+  },
+  "homepage": "https://github.com/npsaunders/Gluten-Free#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "firebase": "^8.10.1",
+    "firebase-admin": "^11.2.0",
+    "method-override": "^3.0.0",
+    "mongodb": "^4.11.0",
+    "mongoose": "^6.6.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth": "^2.0.0"
+  }
+}

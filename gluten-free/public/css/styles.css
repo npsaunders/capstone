@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Video from main landing page --------- */
+video {
+  display: flex;
+  object-fit: cover;
+  height: 45vw;
+  width: 100vw;
+  margin-top: 10px;
+}
+/* End Video --------------------------- */
+
+/* Header & Nav Bar ------------ */
+.Header {
+  display: flex;
+  height: 60px;
+  width: 90vw;
+}
+
+.mainIndexLi {
+  margin: 0 25px;
+  font-weight: 600;
+  color: #039be5;
+  height: 20px;
+}
+
+.gfLogo {
+  height: 50px;
+  width: 50px;
+  margin: 5px auto 0 10px;
+}
+
+nav {
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.li {
+  margin-top: 35px;
+}
+
+/* End Nav Bar --------------- */
+
+/* Recipes ------------------- */
+.allRecipes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.showRecipes {
+  border: 4px solid #91c54c;
+  border-radius: 10px;
+  height: 300px;
+  width: 208px;
+  color: #039be5;
+  display: flex;
+  margin: 10px;
+  background-color: bisque;
+}
+
+.idxRecipeName {
+  text-align: center;
+  font-weight: 700;
+  height: 45px;
+}
+
+.buttonText {
+  color: white;
+  font-weight: 700;
+}
+
+.idxRecipeEditDel {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 7px 15px;
+}
+
+.idxRecipeImg {
+  width: 200px;
+  height: 200px;
+}

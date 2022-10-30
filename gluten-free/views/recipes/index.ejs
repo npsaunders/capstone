@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs') %>
+</head>
+
+<body>
+  <!-- <% if (user) { %> -->
+  <!-- Header & Nav bar  -->
+  <div class="Header">
+    <div class="gfLogo">
+      <img class="gfLogo" src="/imgs/gluten-free-logo.jpg" />
+    </div>
+    <div class="li">
+      <a class="mainIndexLi" href="/new">Add a Recipe</a>
+    </div>
+
+    <div class="li">
+      <a class="mainIndexLi" href="/logout">Log Out</a>
+    </div>
+  </div>
+  <hr>
+  <ul>
+
+    <!-- Show all recipes on "cards" -->
+    <div class="allRecipes">
+      <%for (let i=0; i < recipes.length; i++) {%>
+        <div class="showRecipes">
+          <li>
+            <a href="/<%= recipes[i]._id %>">
+              <div class="idxRecipeName">
+                <%= recipes[i].recipeName %>
+              </div>
+              <div class="idxRecipeImg">
+                <% if(recipes[i].urlPath) {%>
+                  <img class="idxRecipeImg" src=<%=recipes[i].urlPath %>>
+                  <%} else {%>
+                    <img class="idxRecipeImg" src="/imgs/No_Image_Available.jpg">
+                    <% } %>
+              </div>
+
+              <!-- Edit and Delete buttons -->
+              <div class="idxRecipeEditDel">
+                <div>
+                  <button class="waves-effect waves-light btn-small"><a class="buttonText"
+                      href="/<%= recipes[i]._id %>/edit">Edit</a></button>
+                </div>
+                <form action="/<%= recipes[i]._id %>?_method=DELETE" method="POST">
+                  <!-- Delete -->
+                  <div><button class="waves-effect waves-light btn-small buttonText" type="submit">Delete</button>
+                  </div>
+                </form>
+              </div>
+            </a>
+          </li>
+        </div>
+        <%}%>
+  </ul>
+  </div>
+</body>
+<!-- <%}%> -->
+
+</html>

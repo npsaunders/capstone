@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/2d497e6d-56b6-4bdc-9cd6-f6da7955c376/appservices/subscriptions/2d497e6d-56b6-4bdc-9cd6-f6da7955c376/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Gluten-Free",
+  "appService.deploySubpath": "."
+}
