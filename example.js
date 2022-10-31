@@ -1,4 +1,7 @@
-function addTwoNums(a, b) {
+function addTwoNumbs(a, b) {
     return a + b;
 }
-console.log(addTwoNums(1, 2));
+console.log(addTwoNumbs(3, 2));
+console.log(addTwoNumbs("3", 2));
+console.log(addTwoNumbs(2));
+console.log(addTwoNumbs());
